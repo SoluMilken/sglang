@@ -300,9 +300,9 @@ class NgramVerifyInput(SpecInput):
             accept_index=self.accepted_indices,  # mutable
             accept_token_num=self.accept_length,  # mutable
             candidates=candidates,
-            retrieve_index=self.retrieve_index,
-            retrieve_next_token=self.retrieve_next_token,
-            retrieve_next_sibling=self.retrieve_next_sibling,
+            retrive_index=self.retrieve_index,
+            retrive_next_token=self.retrieve_next_token,
+            retrive_next_sibling=self.retrieve_next_sibling,
             target_predict=target_predict,
         )
 
@@ -362,9 +362,9 @@ class NgramVerifyInput(SpecInput):
             accept_index=self.accepted_indices,  # mutable
             accept_token_num=self.accept_length,  # mutable
             candidates=candidates.to(torch.int64),
-            retrieve_index=self.retrieve_index.to(torch.int64),
-            retrieve_next_token=self.retrieve_next_token.to(torch.int64),
-            retrieve_next_sibling=self.retrieve_next_sibling.to(torch.int64),
+            retrive_index=self.retrieve_index.to(torch.int64),
+            retrive_next_token=self.retrieve_next_token.to(torch.int64),
+            retrive_next_sibling=self.retrieve_next_sibling.to(torch.int64),
             uniform_samples=coins,
             uniform_samples_for_final_sampling=coins_for_final_sampling,
             target_probs=target_probs,
